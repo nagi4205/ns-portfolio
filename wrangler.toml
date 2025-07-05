@@ -1,9 +1,2 @@
 name = "ns-portfilio"
 pages_build_output_dir = ".next"
-
-[build]
-command = "pnpm build"
-output = ".next"
-
-[site]
-bucket = ".next" 
