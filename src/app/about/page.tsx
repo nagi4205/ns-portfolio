@@ -110,7 +110,6 @@ export default function Page() {
 						</section>
 					</div>
 				</main>
-				<Footer />
 			</div>
 		</div>
 	);
