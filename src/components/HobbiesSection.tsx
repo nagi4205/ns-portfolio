@@ -48,8 +48,8 @@ export default function HobbiesSection() {
 				</button>
 			</div>
 			<div className="transition-all duration-300">
-				<h3 className="my-2 font-medium">{hobbiesData[activeHobby].title}</h3>
-				<p className="leading-relaxed">{hobbiesData[activeHobby].description}</p>
+				{/* <h3 className="my-2 font-medium">{hobbiesData[activeHobby].title}</h3> */}
+				<p className="leading-relaxed mt-4">{hobbiesData[activeHobby].description}</p>
 			</div>
 		</section>
 	);
