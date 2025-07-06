@@ -19,7 +19,7 @@ export default function Page() {
 		<div className="flex min-h-screen">
 			<Sidebar />
 			<div className="flex-1">
-				<main className="flex-1 p-8 sm:pr-20 sm:pl-0 sm:py-20 font-[family-name:var(--font-geist-sans)]">
+				<main className="flex-1 p-8 pt-40 sm:pr-20 sm:pl-0 sm:pt-40 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
 					<div className="max-w-2xl mx-auto space-y-12">
 						{/* Header Section */}
 						<section>
@@ -44,7 +44,7 @@ export default function Page() {
 							<form ref={formRef} action={formAction} className="space-y-6">
 								<div>
 									<label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-										お名前 *
+										Name *
 									</label>
 									<input
 										type="text"
@@ -53,13 +53,13 @@ export default function Page() {
 										required
 										disabled={isPending}
 										className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100"
-										placeholder="山田 太郎"
+										placeholder="Your Name"
 									/>
 								</div>
 
 								<div>
 									<label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-										メールアドレス *
+										Email *
 									</label>
 									<input
 										type="email"
@@ -74,7 +74,7 @@ export default function Page() {
 
 								<div>
 									<label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-										メッセージ *
+										Message *
 									</label>
 									<textarea
 										id="message"
@@ -83,7 +83,7 @@ export default function Page() {
 										required
 										disabled={isPending}
 										className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-vertical min-h-[162px] disabled:bg-gray-100"
-										placeholder="お問い合わせ内容をご記入ください..."
+										placeholder="Your Message is here..."
 									/>
 								</div>
 
