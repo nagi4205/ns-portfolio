@@ -2,7 +2,7 @@ import Footer from "@/components/layout/Footer";
 
 export const runtime = "edge";
 
-export default function Home() {
+export default function Page() {
 	return (
 		<div className="flex flex-col min-h-screen">
 			<main className="flex-1 p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
