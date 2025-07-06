@@ -1,75 +1,38 @@
 import Footer from "@/components/layout/Footer";
 import Sidebar from "@/components/layout/Sidebar";
 import Image from "next/image";
+import HobbiesSection from "@/components/HobbiesSection";
 
 export const runtime = "edge";
 
 export default function Page() {
+	console.log("aaaa");
 	return (
 		<div className="flex min-h-screen">
 			<Sidebar />
 			<div>
-				<main className="flex-1 p-8 sm:pr-20 sm:pl-0 sm:py-20 font-[family-name:var(--font-geist-sans)]">
+				<main className="flex-1 p-8 pt-40 sm:pr-20 sm:pl-0 sm:pt-40 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
 					<div className="max-w-4xl mx-auto space-y-12">
 						{/* About Section */}
 						<section>
 							<h1 className="text-4xl font-bold mb-6">Hi, I'm Nagi 👋</h1>
 							<p className="leading-relaxed">
-								I started my career as a web engineer in February 2024. Currently, I mainly work
-								with TypeScript and am involved in both frontend and backend development. In my
-								daily work, I focus on writing maintainable and reusable code, and I value teamwork
-								and continuous learning. Through my development work, I strive to create practical
-								and user-friendly services.
+								I started my career as a web engineer in February 2024.
+								<br />
+								Currently, I mainly work with TypeScript and am involved in both frontend and
+								backend development.
+								<br />
+								In my daily work, I focus on writing maintainable and reusable code, and I value
+								teamwork and continuous learning.
+								<br />
+								Through my development work, I strive to create practical and user-friendly
+								services.
 							</p>
 						</section>
-
-						{/* Tech Stack Section */}
-						<section>
-							<h2 className="text-2xl font-semibold mb-4">🛠️ Tech Stack</h2>
-							<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-								<div>
-									<h3 className="text-lg font-medium mb-2 text-blue-600">Frontend</h3>
-									<ul className="list-disc list-inside space-y-1 text-gray-700">
-										<li>TypeScript / JavaScript</li>
-										<li>React.js / Next.js</li>
-										<li>Vue.js / Quasar</li>
-										<li>Tailwind CSS</li>
-									</ul>
-								</div>
-								<div>
-									<h3 className="text-lg font-medium mb-2 text-green-600">Backend</h3>
-									<ul className="list-disc list-inside space-y-1 text-gray-700">
-										<li>Node.js</li>
-										<li>Express.js</li>
-										<li>PHP</li>
-										<li>Laravel</li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						{/* Hobbies Section */}
-						<section>
-							<h2 className="text-2xl font-semibold mb-4">🎯 Hobbies</h2>
-							<div className="bg-gray-50 p-6 rounded-lg">
-								<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-									<div className="text-center">
-										<div className="text-3xl mb-2">🎤</div>
-										<h3 className="font-medium">Karaoke</h3>
-										<p className="text-sm text-gray-600">J-pop & rock</p>
-									</div>
-									<div className="text-center">
-										<div className="text-3xl mb-2">🎬</div>
-										<h3 className="font-medium">Movies</h3>
-										<p className="text-sm text-gray-600">Sci-fi & drama</p>
-									</div>
-								</div>
-							</div>
-						</section>
-
+						<HobbiesSection />
 						{/* Reading Log Section */}
 						<section>
-							<h2 className="text-2xl font-semibold mb-4">📖 Reading Log</h2>
+							<h2 className="text-2xl font-semibold mb-4">Reading Log</h2>
 							<div className="space-y-4">
 								<div className="border-l-4 border-blue-500 pl-4">
 									<h3 className="font-medium">Clean Code</h3>
@@ -97,37 +60,51 @@ export default function Page() {
 
 						{/* Movie Log Section */}
 						<section>
-							<h2 className="text-2xl font-semibold mb-4">
-								🎬 Movie Log{" "}
-								<span className="text-sm font-medium text-gray-500">
-									Building better habits for continuous improvement
-								</span>
-							</h2>
-
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
-								<div className="flex bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-									<img
+							<h2 className="text-2xl font-semibold mb-4">🎬 Movie Log</h2>
+							<div className="space-y-4">
+								<div className="border-l-4 border-gray-400 pl-4 flex gap-4">
+									<Image
 										src="https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/yqzq44ybk5ops585d5v2q6wl0aa2/_.jpg"
-										alt="The Matrix"
-										className="w-[80px]"
+										alt="ミッション：インポッシブル／ファイナル・レコニング"
+										width={80}
+										height={112}
+										className="w-[80px] h-[112px] object-cover rounded"
 									/>
-									<div>
-										<h3 className="font-light text-xs mb-2">
+									<div className="flex-1">
+										<h3 className="font-medium">
 											ミッション：インポッシブル／ファイナル・レコニング
 										</h3>
-										<p className="text-sm text-gray-600 mb-2">⭐⭐⭐⭐⭐</p>
-										<p className="text-sm text-gray-500">Mind-bending sci-fi classic</p>
+										<p className="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+										<p className="text-sm text-gray-500 mt-1">Mind-bending sci-fi classic</p>
 									</div>
 								</div>
-								<div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-									<h3 className="font-medium mb-2">Inception</h3>
-									<p className="text-sm text-gray-600 mb-2">⭐⭐⭐⭐⭐</p>
-									<p className="text-sm text-gray-500">Complex narrative masterpiece</p>
+								<div className="border-l-4 border-gray-400 pl-4 flex gap-4">
+									<Image
+										src="https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/yqzq44ybk5ops585d5v2q6wl0aa2/_.jpg"
+										alt="Inception"
+										width={80}
+										height={112}
+										className="w-[80px] h-[112px] object-cover rounded"
+									/>
+									<div className="flex-1">
+										<h3 className="font-medium">Inception</h3>
+										<p className="text-sm text-gray-600">⭐⭐⭐⭐⭐</p>
+										<p className="text-sm text-gray-500 mt-1">Complex narrative masterpiece</p>
+									</div>
 								</div>
-								<div className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
-									<h3 className="font-medium mb-2">The Social Network</h3>
-									<p className="text-sm text-gray-600 mb-2">⭐⭐⭐⭐</p>
-									<p className="text-sm text-gray-500">Tech startup drama</p>
+								<div className="border-l-4 border-gray-400 pl-4 flex gap-4">
+									<Image
+										src="https://d2ueuvlup6lbue.cloudfront.net/variants/production/store/fitpad/300/420/yqzq44ybk5ops585d5v2q6wl0aa2/_.jpg"
+										alt="The Social Network"
+										width={80}
+										height={112}
+										className="w-[80px] h-[112px] object-cover rounded"
+									/>
+									<div className="flex-1">
+										<h3 className="font-medium">The Social Network</h3>
+										<p className="text-sm text-gray-600">⭐⭐⭐⭐</p>
+										<p className="text-sm text-gray-500 mt-1">Tech startup drama</p>
+									</div>
 								</div>
 							</div>
 						</section>
